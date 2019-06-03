@@ -217,3 +217,7 @@ p += pack('<I', ? + base_libcaddr) # int 0x80
 print(p)
 
 ```
+
+# Ref
+[1] <https://yq.aliyun.com/articles/58699>
+[2] <https://github.com/zhengmin1989/ROP_STEP_BY_STEP>
